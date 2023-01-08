@@ -1,0 +1,30 @@
+.nav {
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.link {
+  height: 2.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+
+  & > a {
+    height: 100%;
+  }
+
+  & svg {
+    height: 100%;
+  }
+
+  &--active {
+    svg {
+      fill: red;
+    }
+  }
+}

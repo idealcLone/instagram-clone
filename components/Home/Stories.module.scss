@@ -1,0 +1,16 @@
+.container {
+  grid-area: stories;
+  padding: 0 3.2rem;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.stories {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+  overflow: auto;
+  padding: .5rem;
+}
