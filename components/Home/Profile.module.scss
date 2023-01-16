@@ -1,0 +1,29 @@
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  padding-top: 3.4rem;
+}
+
+.info {
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.username {
+
+}
+
+.fullName {
+  color: var(--color-gray);
+}
+
+.link {
+  color: var(--color-blue);
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+}

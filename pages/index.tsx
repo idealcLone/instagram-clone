@@ -1,6 +1,6 @@
 import { Feed } from "../components/Home/Feed";
 import { Stories } from "../components/Home/Stories";
-import { Suggestions } from "../components/Home/Suggestions";
+import { Sidebar } from "../components/Home/Sidebar";
 
 import styles from "./Home.module.scss";
 
@@ -9,7 +9,7 @@ export default function Home() {
     <div className={styles.home}>
       <Stories />
       <Feed />
-      <Suggestions />
+      <Sidebar />
     </div>
   );
 }

@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 30rem;
   grid-template-rows: 12rem 1fr;
-  grid-template-areas: 'stories suggestions'
-                       'feed suggestions';
+  grid-template-areas: 'stories side'
+                       'feed side';
   grid-column-gap: 3rem;
   grid-row-gap: 1.6rem;
+  padding-bottom: 10rem;
 }

@@ -1,3 +1,56 @@
 .container {
-  grid-area: suggestions;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+
+.seeAll {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.suggestion {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  font-size: 1.4rem;
+  line-height: 1.1rem;
+
+  & > div:last-child {
+    font-size: 1.2rem;
+    color: var(--color-gray);
+  }
+}
+
+.follow {
+  color: var(--color-blue);
+  cursor: pointer;
 }
