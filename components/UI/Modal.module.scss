@@ -1,0 +1,26 @@
+.modal {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body {
+  z-index: 11;
+  background-color: var(--color-white);
+  border-radius: 4px;
+  padding: 1.6rem;
+  min-width: 50rem;
+  min-height: 20rem;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(#000, .6);
+}

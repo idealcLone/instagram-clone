@@ -1,13 +1,13 @@
-.header {
-  width: 100vw;
-  height: 5rem;
-  border-bottom: 1px solid var(--border-color);
-  margin-bottom: 2.7rem;
+.layout {
+  display: flex;
 }
 
-.container {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.aside {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 24rem;
+  height: 100vh;
+  border-right: 1px solid var(--border-color);
+  padding: 1rem;
 }

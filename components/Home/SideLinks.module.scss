@@ -1,0 +1,14 @@
+.links {
+  margin-top: .6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+}
+
+.link {
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  font-weight: 400;
+  color: var(--footer-color);
+}

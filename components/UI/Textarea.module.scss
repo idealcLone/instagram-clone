@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.input {
+  width: 100%;
+  height: 10rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1rem;
+  background-color: var(--color-white-dark);
+  resize: none;
+}

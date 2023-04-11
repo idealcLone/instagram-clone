@@ -1,0 +1,35 @@
+$modal-padding: 1.6rem;
+
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $modal-padding;
+  width: 45%;
+  height: 70rem;
+
+  &__post {
+    position: absolute;
+    top: $modal-padding;
+    right: $modal-padding;
+    cursor: pointer;
+    color: var(--color-blue);
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1;
+    font-weight: 600;
+  }
+
+  &__divider {
+    background-color: var(--border-color);
+    height: 1px;
+    width: calc(100% + 2 * $modal-padding);
+    position: relative;
+    left: -$modal-padding;
+  }
+
+  &__description {}
+}

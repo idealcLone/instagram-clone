@@ -5,7 +5,7 @@ import styles from "./Avatar.module.scss";
 import Image from "next/image";
 
 type Props = {
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl";
   bordered?: boolean;
   src?: string;
 };

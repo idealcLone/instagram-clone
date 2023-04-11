@@ -1,0 +1,33 @@
+$grid-gap: 2.4rem;
+
+.inline {
+  display: flex;
+  gap: $grid-gap;
+
+  & > div {
+    flex: 1;
+  }
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $grid-gap;
+}
+
+.image {
+  position: relative;
+  aspect-ratio: 1;
+
+  &--front {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  &--end {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }
+}
