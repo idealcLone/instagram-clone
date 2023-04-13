@@ -5,9 +5,13 @@ import React, { useState } from "react";
 import { Input } from "../../components/UI/Input";
 import { Button } from "../../components/UI/Button";
 import { useRouter } from "next/router";
+import axios from "axios";
+import { useUserContext } from "../../contexts/UserContext";
 
 const Auth: NextPage = () => {
   const router = useRouter();
+
+  const { setUser } = useUserContext();
 
   const [formData, setFormData] = useState({
     username: "",
@@ -21,7 +25,15 @@ const Auth: NextPage = () => {
   };
 
   const handleLogin = () => {
-    router.push("/");
+    const { username, password } = formData;
+
+    axios
+      .post("/api/auth", { username, password })
+      .then((res) => {
+        setUser(res.data);
+        router.push("/");
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -37,9 +49,9 @@ const Auth: NextPage = () => {
       <Input
         classNames={styles.input}
         type={"password"}
-        value={formData.username}
+        value={formData.password}
         onChange={onChange}
-        name={"username"}
+        name={"password"}
         placeholder={"Enter your password"}
       />
       <Button onClick={handleLogin} classNames={styles.btn}>

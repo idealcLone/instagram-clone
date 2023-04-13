@@ -37,7 +37,7 @@ export const SearchModal: React.FC = () => {
         name={"searchQuery"}
         value={query}
         onChange={handleSearch}
-        placeholder={"Search user"}
+        placeholder={"Search users"}
         type={"search"}
       />
       <ul className={styles.modal__result}>

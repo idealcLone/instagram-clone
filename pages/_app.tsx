@@ -4,20 +4,23 @@ import { Layout } from "../components/Layout/Layout";
 import { useRouter } from "next/router";
 import { ModalProvider } from "../contexts/ModalContext";
 import { ModalWrapper } from "../components/Modals/ModalWrapper";
+import { UserProvider } from "../contexts/UserContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   return (
-    <ModalProvider>
-      <ModalWrapper />
-      {router.pathname === "/auth" ? (
-        <Component {...pageProps} />
-      ) : (
-        <Layout>
+    <UserProvider>
+      <ModalProvider>
+        <ModalWrapper />
+        {router.pathname === "/auth" ? (
           <Component {...pageProps} />
-        </Layout>
-      )}
-    </ModalProvider>
+        ) : (
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        )}
+      </ModalProvider>
+    </UserProvider>
   );
 }
