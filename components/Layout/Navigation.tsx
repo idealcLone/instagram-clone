@@ -80,7 +80,7 @@ export const Navigation: React.FC = () => {
               )
           )}
           <li className={styles.link}>
-            <Link href={`/${user.username}`}>
+            <Link href={`/profile/${user.username}`}>
               <Avatar size={"sm"} />
               <div>Profile</div>
             </Link>

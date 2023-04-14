@@ -86,11 +86,6 @@ export const Post: React.FC<Props> = ({ post, revalidate }) => {
             <strong>{post.user?.username}</strong>
             {post.description}
           </p>
-          <div className={styles.addComment}>
-            <Image src="/icons/emoji.svg" alt="Emoji" width={24} height={24} />
-            <input type="text" placeholder={"Add a comment..."} />
-            <div>Post</div>
-          </div>
         </div>
       </footer>
     </article>

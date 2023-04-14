@@ -51,7 +51,7 @@ export const SearchModal: React.FC = () => {
             user.id !== currentUser.id && (
               <li key={user.id}>
                 <Link
-                  href={user.username}
+                  href={`/profile/${user.username}`}
                   className={styles.modal__user}
                   onClick={onClose}
                 >

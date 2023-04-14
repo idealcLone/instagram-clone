@@ -1,11 +1,11 @@
-import { Avatar } from "../../components/UI/Avatar";
+import { Avatar } from "../../../components/UI/Avatar";
 import styles from "./Profile.module.scss";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { useModalContext } from "../../contexts/ModalContext";
-import { OPEN_POST } from "../../consts/nav";
-import { useUserContext } from "../../contexts/UserContext";
-import { IPost, User } from "../../types/types";
+import { useModalContext } from "../../../contexts/ModalContext";
+import { OPEN_POST } from "../../../consts/nav";
+import { useUserContext } from "../../../contexts/UserContext";
+import { IPost, User } from "../../../types/types";
 import axios from "axios";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
