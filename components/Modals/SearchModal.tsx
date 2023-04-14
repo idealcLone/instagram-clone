@@ -21,7 +21,7 @@ export const SearchModal: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get(`/api/users`, { params: { query } })
+      .get(`/api/users`, { params: { search: query } })
       .then((res) => setResult(res.data))
       .catch((err) => console.log(err));
   }, [query]);
