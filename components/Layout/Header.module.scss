@@ -10,4 +10,16 @@
   height: 100vh;
   border-right: 1px solid var(--border-color);
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logout {
+  padding-left: 1rem;
+  align-self: flex-start;
+  font-size: 1.6rem;
+  color: var(--color-blue);
+  font-weight: 500;
+  cursor: pointer;
 }

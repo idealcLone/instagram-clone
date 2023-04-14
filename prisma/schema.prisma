@@ -12,10 +12,11 @@ datasource db {
 
 model Post {
     id    Int     @id @default(autoincrement())
-    author User? @relation(fields: [authorId], references: [id])
-    authorId Int?
+    author Int
     description String
+    image String
     createdAt     DateTime  @default(now()) @map(name: "created_at")
+    likes Int[]
 }
 
 model Follow {
@@ -31,6 +32,4 @@ model User {
     username  String @unique
     followers Int[]
     following Int[]
-    posts Post[]
-    @@map(name: "users")
 }

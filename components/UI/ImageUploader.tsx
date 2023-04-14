@@ -7,12 +7,14 @@ type Props = {
   images: File[];
   onUpload: (images: File[]) => void;
   onRemove: (index: number) => void;
+  multiple?: boolean;
 };
 
 export const ImageUploader: React.FC<Props> = ({
   images,
   onUpload,
   onRemove,
+  multiple = false,
 }) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -33,7 +35,7 @@ export const ImageUploader: React.FC<Props> = ({
         ref={inputRef}
         onChange={handleUpload}
         hidden
-        multiple
+        multiple={multiple}
       />
       {images.length > 0 ? (
         <ImageSlider images={images} onRemove={onRemove} />

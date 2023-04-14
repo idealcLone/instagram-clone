@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from "react";
 import { User } from "../types/types";
 
 const INITIAL_USER: User = {
-  id: 0,
+  id: -1,
   username: "",
   password: "",
   followers: [],

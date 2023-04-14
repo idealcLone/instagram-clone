@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Header } from "./Header";
 import { Roboto } from "@next/font/google";
 import styles from "./Header.module.scss";
+import { useUserContext } from "../../contexts/UserContext";
+import { useRouter } from "next/router";
 
 const roboto = Roboto({
   weight: ["400", "500"],
@@ -13,6 +15,15 @@ type Props = {
 };
 
 export const Layout: React.FC<Props> = ({ children }) => {
+  const router = useRouter();
+  const { user } = useUserContext();
+
+  useEffect(() => {
+    if (user.id < 0) {
+      router.push("/auth");
+    }
+  }, [user]);
+
   return (
     <div className={styles.layout}>
       <Header />

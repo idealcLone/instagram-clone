@@ -22,12 +22,16 @@
 }
 
 .image {
+  position: relative;
+  width: 100%;
   height: 60rem;
-  background-image: var(--gradient-2);
+}
+
+.imageContent {
+  object-fit: contain;
 }
 
 .footer {
-  height: 20rem;
   display: flex;
   flex-direction: column;
 
@@ -96,7 +100,7 @@
   top: 0;
   left: -1.6rem;
   width: calc(100% + 4.8rem);
-  padding: 0 1.6rem;
+  padding: 2rem 1.6rem;
   flex: 1;
   border-top: 1px solid var(--border-color);
   display: flex;

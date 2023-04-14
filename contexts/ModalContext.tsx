@@ -1,8 +1,14 @@
 import React, { createContext, useContext, useState } from "react";
 
+const INITIAL_MODAL_STATE = {
+  type: "",
+  context: {},
+};
+
 const ModalContext = createContext({
   modalType: "",
-  setModalType: (modalType: string) => {},
+  context: {} as any,
+  setModalType: (modalType: string, context?: any) => {},
 });
 
 export const useModalContext = () => useContext(ModalContext);
@@ -12,10 +18,16 @@ type Props = {
 };
 
 export const ModalProvider: React.FC<Props> = ({ children }) => {
-  const [modalType, setModalType] = useState<string>("");
+  const [modal, setModal] = useState(INITIAL_MODAL_STATE);
+
+  const setModalType = (type: string, context?: any) => {
+    setModal({ type, context });
+  };
 
   return (
-    <ModalContext.Provider value={{ modalType, setModalType }}>
+    <ModalContext.Provider
+      value={{ modalType: modal.type, context: modal.context, setModalType }}
+    >
       {children}
     </ModalContext.Provider>
   );

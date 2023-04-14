@@ -7,8 +7,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { useModalContext } from "../../contexts/ModalContext";
+import { useUserContext } from "../../contexts/UserContext";
 
 export const Navigation: React.FC = () => {
+  const { user } = useUserContext();
+
   const router = useRouter();
   const { setModalType } = useModalContext();
 
@@ -77,7 +80,7 @@ export const Navigation: React.FC = () => {
               )
           )}
           <li className={styles.link}>
-            <Link href={"/profile"}>
+            <Link href={`/${user.username}`}>
               <Avatar size={"sm"} />
               <div>Profile</div>
             </Link>

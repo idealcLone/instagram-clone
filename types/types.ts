@@ -6,14 +6,17 @@ export interface User {
   following: number[];
 }
 
-export interface Post {
+export interface IPost {
   id: number;
-  authorId: number;
+  author: number;
   description: string;
+  image: string;
   created_at: Date | string;
+  user?: User;
+  likes: number[];
 }
 
-export interface Follow {
+export interface IFollow {
   id: number;
   follower: number;
   following: number;

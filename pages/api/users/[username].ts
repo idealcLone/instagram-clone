@@ -5,9 +5,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const id = Number(req.query.id);
+  const username = req.query.username as string;
   const result = await prisma.user.findFirst({
-    where: { id },
+    where: { username },
   });
 
   if (result) {

@@ -50,8 +50,9 @@ export const ImageSlider: React.FC<Props> = ({ onRemove, images }) => {
           <div key={image.lastModified + index} onClick={handleRemove}>
             <Image
               src={URL.createObjectURL(image)}
-              fill
               alt={"Uploaded image"}
+              className={styles.image}
+              fill
             />
           </div>
         ))}
